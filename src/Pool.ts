@@ -1,8 +1,16 @@
+//@ts-nocheck
 import { PendingOperation } from './PendingOperation';
 import { Resource } from './Resource';
 import { checkOptionalTime, delay, duration, now, reflect, tryPromise } from './utils';
 import { EventEmitter } from 'events';
-import { clearInterval } from 'timers';
+
+let clearInterval;
+if (typeof EdgeRuntime === 'string') {
+  clearInterval = globalThis.clearInterval;
+} else {
+  const { clearInterval: nodeInterval } = require('timers');
+  clearInterval = nodeInterval;
+}
 
 export interface PoolOptions<T> {
   create: CallbackOrPromise<T>;

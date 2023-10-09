@@ -1,7 +1,7 @@
 {
-  "name": "tarn",
+  "name": "tarn-edgeruntime",
   "version": "3.0.1",
-  "description": "Simple and robust resource pool for node.js",
+  "description": "Simple and robust resource pool for node.js with edgeruntime patches",
   "main": "dist/tarn.js",
   "types": "dist/tarn.d.ts",
   "license": "MIT",
@@ -15,9 +15,8 @@
     "format": "prettier **/*.{js,ts} --write"
   },
   "author": {
-    "name": "Sami Koskimäki",
-    "email": "sami.koskimaki@vincit.com",
-    "url": "https://github.com/koskimas"
+    "name": "Phil Gale",
+    "url": "https://github.com/philgale92"
   },
   "repository": {
     "type": "git",
